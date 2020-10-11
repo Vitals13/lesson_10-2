@@ -1,0 +1,418 @@
+/* Подключение шрифтов */
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+/* Обнуляющий стиль */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+ol li,
+ul li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+	font-size: 14px;
+	line-height: 1;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+/* ---------------------------------------------------------------------------- */
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	background-color: rgb(17, 20, 40);
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+.form {
+	max-width: 384px;
+	margin: 0px auto;
+	padding: 50px 0px 0px 0px;
+}
+.form__item {
+}
+.form__label {
+	color: #ffffff;
+	font-family: Gilroy;
+	font-size: 38px;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: normal;
+	text-align: center;
+	margin: 0px 0px 41px 0px;
+}
+.options {
+}
+.options__item {
+}
+.options__item *:last-child {
+	margin-bottom: 0;
+}
+.options__input {
+	width: 100%;
+	height: 50px;
+	border-radius: 5px;
+	padding: 0px 0px 0px 20px;
+	margin: 0px 0px 30px 0px;
+	color: #777777;
+	font-family: Gilroy;
+	font-size: 18px;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: normal;
+	text-align: left;
+}
+/* ------------------------------------------------------------------------------------------------- */
+
+.option {
+}
+.option__item {
+	position: relative;
+	display: inline-block;
+	margin: 20px 50px 0px 0px;
+}
+.option__input {
+	display: none;
+}
+.option__input:checked + .option__label::after {
+	display: block;
+}
+.option__label {
+	color: #ffffff;
+	font-family: Gilroy;
+	font-size: 18px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: normal;
+	text-align: left;
+	padding: 0px 0px 0px 30px;
+}
+.option__label:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.option__label::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.option__label::after {
+	content: "";
+	display: none;
+	width: 12px;
+	height: 12px;
+	background-color: rgb(51, 122, 183);
+	position: absolute;
+	top: 3.8px;
+	left: 3px;
+	border-radius: 50%;
+}
+/* ------------------------------------------------------------------------------------------------- */
+.checkbox {
+	margin: 30px 0px 30px 0px;
+	position: relative;
+}
+.check__input {
+	display: none;
+}
+.check__input:checked + .checkbox__label::after {
+	display: block;
+}
+.checkbox__label {
+	color: #ffffff;
+	font-family: Gilroy;
+	font-size: 18px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: normal;
+	text-align: left;
+	padding: 0px 0px 0px 30px;
+}
+
+.checkbox__label::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.checkbox__label::after {
+	content: "";
+	display: none;
+	width: 12px;
+	height: 12px;
+	background-color: rgb(51, 122, 183);
+	position: absolute;
+	top: 3.8px;
+	left: 3px;
+	border-radius: 50%;
+}
+.checkbox__label:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.checkbox__password a {
+	color: #64b369;
+	font-family: Gilroy;
+	font-size: 18px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: normal;
+	text-align: left;
+	padding: 0px 0px 0px 50px;
+}
+.checkbox__password:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.password__input {
+	display: none;
+}
+/* ------------------------------------------------------------------------------------------------- */
+
+.check__box {
+	margin: 20px 0px 30px 0px;
+	position: relative;
+}
+.check__box-input {
+	display: none;
+}
+.check__box-input:checked + .check__box-label::after {
+	display: block;
+}
+.check__box-label {
+	color: #ffffff;
+	font-family: Gilroy;
+	font-size: 18px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: normal;
+	text-align: left;
+	margin: 0px 10px 0px 0px;
+	padding: 0px 0px 0px 30px;
+}
+.check__box-label:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.check__box-label::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 5px;
+}
+.check__box-label::after {
+	content: "";
+	display: none;
+	width: 12px;
+	height: 12px;
+	background-color: rgb(51, 122, 183);
+	position: absolute;
+	top: 3.8px;
+	left: 3px;
+	border-radius: 50%;
+}
+.password-input {
+	display: none;
+}
+.check__box-password {
+}
+.check__box-password a {
+	color: #64b369;
+	font-family: Gilroy;
+	font-size: 18px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: normal;
+	text-align: left;
+}
+.check__box-password a:hover {
+	text-decoration: underline;
+}
+/* ------------------------------------------------------------------------------------------------- */
+
+.button {
+	width: 100%;
+	height: 50px;
+	border-radius: 5px;
+	background-color: rgb(51, 122, 183);
+	color: #ffffff;
+	font-family: Gilroy;
+	font-size: 24px;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: normal;
+	margin: 0px 0px 50px 0px;
+}
+.button:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+/* ------------------------------------------------------------------------------------------------- */
+
+.form__footer {
+	max-width: 441px;
+	margin: 0px auto;
+}
+
+.form__title {
+	max-width: 441px;
+	margin: 0px auto;
+	color: #ffffff;
+	font-family: Gilroy;
+	font-size: 38px;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: normal;
+	text-align: left;
+}
+.form__subtitle {
+	margin: 0px 0px 20px 0px;
+	color: #64b369;
+	font-family: Gilroy;
+	font-size: 16px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: normal;
+	text-align: left;
+}
+.checkfooter {
+	margin: 30px 0px;
+	position: relative;
+}
+.checkfooter__footer {
+	display: none;
+}
+.checkfooter__label {
+color: #ffffff;
+font-family: Gilroy;
+font-size: 16px;
+font-weight: 500;
+font-style: normal;
+letter-spacing: normal;
+line-height: normal;
+text-align: left;
+padding: 0px 0px 0px 30px;
+}
+
+.checkfooter__label::before{
+	content: '';
+	width: 16px;
+	height: 16px;
+	background: url('../img/icons/1.svg') 0 0 no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 0;
+}
+.checkfooter__label:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
